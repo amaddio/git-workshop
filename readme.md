@@ -308,6 +308,8 @@ Last minute decisions on what should be committed.
 
 For untracked files: `git add -N <filename> & git add -p`
 
+Show partially changes: `git diff --staged`
+
 Carefull! Do not use Sourcetree for this operation. It changes your working copy version! You'll loose your changes.
 
 ### Group Task (Partial File Staging)
