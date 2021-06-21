@@ -72,8 +72,11 @@ Levels (and locations) of git configurations in ascending prioritized order:
 
 A few principles why it is usefull to use git are explained in John's story.
 
-![](visualisations/john.jpeg)
+![](visualisations/john.jpeg)  
 _This could be John_
+
+
+### `# History`
 
 John has started his journey as a PHD student.
 Eagerly and overly optimistic he created a draft of his doctoral thesis
@@ -89,6 +92,9 @@ Frightened to loose his past document state he opens his file trys the "back" bu
 
 ➡️&nbsp; Git `#history`: Git stores every version of any file that you want it to.
 Basically it is a database of your versioned documents.
+
+
+### `# version`
 
 As John has learned the hard way he is making backups on a daily basis. He is
 so disciplinated. Look. His current working draft carries the name:
@@ -114,6 +120,8 @@ The ones before were:
 
 ➡️&nbsp; Git `#version`: Document each version with a comprehensive comment and store each set of changes in a reusable manner.
 
+### `# decentralisation`
+
 > John is going on his first conference to Tel aviv.
 His overly funny smile and his notebook with 51 colorful stickers on them raises the attention of the customs.
 They say they want to check on his computer.
@@ -133,10 +141,16 @@ funny cat videos und nerdy memes about science that literally no normal person u
 > He get's to the airport customs and flies back home. His notebook on his lap. Happy and ready to continue with his work.
 > He unfolds his notebook and trys to load the Google Doc file. No internet connection it sais. Crap!
 
+
 ➡️&nbsp; Git `#decentralisation`: Work offline; Work on different machines. Best from both worlds.
+
+### `# branching`, `# merging`, `# patching`, `# stashing`
 
 > After John landed and arrived home he starts working immediately. He touches base with other pre-docs he connected with
 on the conference. He wants to collaborate with a Sara who shares similar research questions.
+
+![](visualisations/sara.jpeg)  
+_This looks like a Sara_
 
 > Sara sais she prefers to write heir articles in Latex. John can't be bothered to learn Latex and figures it's best to
 exchange diffs with Sara whenever something changes.
@@ -149,6 +163,8 @@ ceiling and wonders if there is no easier way to collaborate.
 ➡️&nbsp; Git `#branching`, `#merging`, `#patching (commit chunks)` `#stashing`: Git supports concurrent versions of files that you can branch and merge at any time you want. You don't have to
 store files entirely. You can decide which chunks (lines) of a file you want to store (commit).
 
+### `# data control`
+
 > John is proud to share his first set of data from his pilot with Sara. He zips his working directory and mails it to Sara.
 After not hearing back for a weak he double checked his mail and the attachment he has sent.
 
@@ -158,14 +174,17 @@ thinks that he is a douch and thinks about discontinuing to work together.
 
 ➡️&nbsp; Git `#data control`: You can review each commit before any push event and also prevent certain files to be committed. 
 
+### `# rewrite history`, `# documentation`
+
 > Sara responds after a while saying that she's spend some time off and that she liked the party animal in John. Relieved
 he zips his updated set of data and shares it with Sara. Sarah responds with a thank you and that the she loves the idea
 of a shared GitHub account. Stumbled John thinks how Sara gained access to his hidden password file and realizes that
 he did not remove the sensitive file before zipping.
 
-
 ➡️&nbsp; Git `#rewrite history`, `#documentation`: You can have full control over Git's stored history. That means you can rewrite (delete) parts of the history. Deletions
 can also be publicy committed to document a roll-back of an error that one has made.
+
+### `# collaboration` `# integration`
 
 > John is a supporter of the open science idea. One day as John elaborates on the reproduction crisis and possible solutions. He wonders how he could share experimental code to collect data in different laboratories.
 Engage others to challenge his findings by rerunning his experiments. Others would not need to write another instrument. The would simply rerun the same code.
