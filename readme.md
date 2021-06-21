@@ -228,6 +228,8 @@ Syntax remains same for both files. Examples:
 - ignore files from a folder named `data`: `data/`
 - ignore files from the folder named `data` of the current directory: `/data`
 - ignore files from the folder named `data` in the `test` subdirectory: `/test/data`
+- add ignored files in status output: `git status --ignored`
+- print ignored files: `git ls-files --others --ignored --exclude-standard`
 
 ### Group Task (ignore files)
 
@@ -267,6 +269,7 @@ A file is tracked once it has been added to the index. "Tracked" means that if a
 - Remove file from index (keep in working directory): `git rm --cached <filename>`
 - (old) Remove commited file from index (keep in working directory): `git restore --stage <filename>`
 - (new >= 2.23.0) Remove commited file from index (keep in working directory): `git reset HEAD <filename>`
+- reset all staged files: `git reset`
 - To check out (!overwrite) a file from the index to your workspace version type: `git checkout <filename>`
   - Sourcetree: Select file | Click on bullets | Discard file
 
@@ -379,7 +382,9 @@ To create a new commit that reverts an earlier one type: `git revert <commit>`. 
 
 ## Interactive Rebasing
 
-You can rewrite the history of a branch entirely by using the `git rebase -i` command. You can interactively, change commit messages or drop a comit.
+You can rewrite the history of a branch by using the `-i` interactively argument and specifying the commit checksum you want to rebase the following commits on: `git rebase -i <commit_sha>`.
+You can interactively, change commit messages or drop a comit. If you want to include the root commit you have to use `git rebase -i --root`.
+
 Be careful with this operation. Use it only in branches that are entirely yours or if you plan to make changes others have not based their work upon.
 
 ### Group Task (Interactive Rebasing)
