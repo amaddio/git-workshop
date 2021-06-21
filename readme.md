@@ -4,8 +4,6 @@
 
 ## Day 1: session 1
 
-__TOC__
-
 Summary of first session:
 
  - Git Background
@@ -13,6 +11,7 @@ Summary of first session:
  - Advantages of Git explained in John's story
  - Initialize Git repository
  - Ignoring files
+ - Git storages
  - File tracking
  - Git internals
 
@@ -54,6 +53,12 @@ stupid. contemptible and despicable. simple. Take your pick from the dictionary 
 - `git config --global alias.lol "log --oneline --graph --decorate"`
 - `git config --global alias.lola "log --oneline --graph --decorate --all"`
 
+List your current config settings: `git config --list`
+
+If you choose to use `main` instead of `master` branch name as [GitLab and GitHub officially changed the branch names](https://about.gitlab.com/blog/2021/03/10/new-git-default-branch-name/):
+
+`git config --global init.defaultBranch main`
+
 If you work on your branches on your own:
 
 - `git config --global pull.rebase "true"` (_explained later_)
@@ -65,7 +70,10 @@ Levels (and locations) of git configurations in ascending prioritized order:
 
 ##  Advantages of Git (John's story)
 
-# todo: Create memes in Adobe Spark with pictures John's peoplethatdontexist.com
+A few principles why it is usefull to use git are explained in John's story.
+
+![](visualisations/john.jpeg)
+_This could be John_
 
 John has started his journey as a PHD student.
 Eagerly and overly optimistic he created a draft of his doctoral thesis
@@ -291,6 +299,14 @@ Carefull! Do not use Sourcetree for this operation. It changes your working copy
 
 ## Day 1: Session 2
 
+Summary of second session:
+
+- Versioning files (Commit)
+- amend?
+- rebase?
+- revert a commit
+- References (to a commit)
+
 ## Commit (File Version Snapshot)
 
 - version: full snapshot of file(s)
@@ -302,12 +318,6 @@ To commit (store) staged files type: `git commit -m "<your message>"` or `git co
 What data is stored in a commit? (P. 66) 
 
 - See the log of past commits: `git log`
-
-Change a commit (that has not yet been pushed).
-
-`git commit --amend`
-
-If you are working alone in your branches you can also make use of interactive rebasing to edit any commit in the timeline: `git rebase -i`
 
 **Deep dive into Gits databas**e:
 
@@ -326,14 +336,35 @@ What means:
 
 SHA-1 hash. This is a 40-character string composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git
 
-### Revert a Commit
+## Changing a Commit
+
+To change the last commit you can use `git commit --amend` command. Make sure that the commits have not yet been pushed to a remote.
+
+### Group Task (amend commit)
+
+- create a new file 
+- commit the new file with a bogus message
+- make a change to the committed file
+- commit the file changes and give it a descriptive message by amending the last commit.
+
+## Revert a Commit
 
 To create a new commit that reverts an earlier one type: `git revert <commit>`. It applies the exact opposite of the reverted commit as new commit.
 
-#### Group Task (revert commit)
+### Group Task (Revert Commit)
 
 - create a four commits
 - revert the last
+
+## Interactive Rebasing
+
+You can rewrite the history of a branch entirely by using the `git rebase -i` command. You can interactively, change commit messages or drop a comit.
+Be careful with this operation. Use it only in branches that are entirely yours or if you plan to make changes others have not based their work upon.
+
+### Group Task (Interactive Rebasing)
+
+- create a file with 
+
 
 ### Git Storage (Page 17)
 
@@ -362,7 +393,7 @@ Read through John's story and assign the Git commands to each (all) principle(s)
 are required to master Git's `#history`. Note down and try out all commands that effect Git's history.
 
 #### Challenge 1
-You have been lazy and staged all files. The status shows a file that you do not want to commit. Reset the file from your index.
+You have been lazy and staged all files. The status shows a file that you do not want to commit. Reset the file from your index then commit.
 
 _(Page 39)_
 
@@ -419,7 +450,7 @@ What happens internally when you create a new branch:
 
 _Note: any new commit will be added to the checked out branch – where HEAD is referencing to_
 
-Show example in oh-my-git. Commands that will be used are:
+Commands that will be used are:
 
 - create a new branch and switch to it (check out): `git checkout -b <branch_name>`
   - alternative: `git switch -c new-branch`
@@ -655,6 +686,9 @@ Recommended workflow prior changing files:
 This book has been referenced in the workshop.  
 https://git-scm.com/book
 
+### A Game to Learn Git
+https://ohmygit.org/
+
 ### official Documentation
 https://git-scm.com/
 
@@ -690,3 +724,4 @@ https://www.youtube.com/watch?v=P6jD966jzlk
 
 ## References
 - Pictures of John and Sara are from https://thispersondoesnotexist.com/
+- Other pictures are from unsplash.com
