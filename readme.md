@@ -470,9 +470,9 @@ Recommendations:
 - do let branches diverge as little as possible (merge often)
 
 What happens internally when you create a new branch:
-  - creates reference named as the branch
-  - updates HEAD (reference) to point to this reference
-  - (!updates workspace files the state of the related commit – if states diverged)
+ - creates reference named as the branch
+ - updates HEAD (reference) to point to this reference
+ - (!updates workspace files the state of the related commit – if states diverged)
 
 _Note: any new commit will be added to the checked out branch – where HEAD is referencing to_
 
@@ -575,7 +575,7 @@ Try to fix the merge conflict. No more instructions given:
 
 Git rebase helps to create a clean line of history without merge commits.
 
-If you are working alonine in your local and remote branches:  
+If you are working alone in your local and remote branches:  
 To switch the `git pull` strategy from `merge` to `rebase` adjust the config: `git config --global pull.rebase "true"`.
 Default rebasing merge strategy is not recommended for collaborative working!
 
@@ -632,6 +632,29 @@ Add GitHub Account to Sourcetree:
 4. Choose "Host": `GitHub`; "Auth Type": `OAuth`
 5. Sign into GitHub in browser window
 
+## Authentication – Remote Repository
+
+To authenticate against a remote Git repository you can either:
+- use username / password or
+- use a password file (recommended).
+
+Using a ssh key to authenticate against GitHub or GitLab is recommended. To see if you already
+have a ssh key that you could reuse – use this command to list all existing keys: `ls -al ~/.ssh`
+
+If you already have one you can add it to your account:
+
+- GitHub: https://github.com/settings/ssh/new
+- GitLab: https://gitlab.com/-/profile/keys
+
+If you do not already have one you can create one now. Use one of the following instruction:
+ - GitHub: https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+ - GitLab: https://docs.gitlab.com/ee/ssh/README.html#generate-an-ssh-key-pair
+
+_If you choose to use HTTPS over SSL authentication you won't need a key. Your choice_
+
+### Group Task
+
+Check if you have a key. Store the public (ssh) key in your GitHub account.
 
 ## Remote repository
 
