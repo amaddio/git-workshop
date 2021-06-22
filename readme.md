@@ -663,12 +663,14 @@ to collaborate with others or to use it as a back-up for yourself.
 
 To connect your local (existing) repository to a (GitHub) remote:
 
-- add a remote URL to your local repository `git remote add <shortname> <url>`
-  - `git remote add origin git@github.com:<username>/<project_name>.git`
-- (optional: if you choose to use `main` as the main branch name instead of master)
- - (move (rename) current (`master`) to `main` branch `git branch -M main`)
- - (push to and assign remote upstream branch for `main` local branch: `git push -u origin main`)
-- push your changes to the remote: `git push -u origin master`
+ - add a remote URL to your local repository `git remote add <shortname> <url>`
+   - `git remote add origin git@github.com:<username>/<project_name>.git`
+ - (optional: if you choose to use `main` as the main branch name instead of master)
+   - (move (rename) current (`master`) to `main` branch `git branch -M main`)
+   - (push to and assign remote upstream branch for `main` local branch: `git push -u origin main`)
+ - push your changes to the remote: `git push -u origin master`
+
+Additional commands to list information about the origin (remote):
 
 - list infos about remote: `git remote show origin`
 - list (fetch, push) URLs of remote repository: `git remote -v`
