@@ -465,10 +465,6 @@ branches would be experimental versions.
 
 ![](https://unsplash.com/photos/Du41jIaI5Ww)
 
-Recommendations:
-- keep branches as little as possible (feature)
-- do let branches diverge as little as possible (merge often)
-
 What happens internally when you create a new branch:
  - creates reference named as the branch
  - updates HEAD (reference) to point to this reference
@@ -489,6 +485,10 @@ Commands that will be used are:
  - only merged branches: `git branch --merged`
  - only not merged branches: `git branch --no-merged`
 
+**Recommendations**:
+- keep branches as little as possible (feature)
+- do let branches diverge as little as possible (merge often)
+
 **Problem** with switching branches: clean working state. Switching branches requires a checkout which you can only do
 when you all of your changes are committed. Solutions:
  - stash
@@ -497,14 +497,14 @@ when you all of your changes are committed. Solutions:
 ## Merging (one branch into another)
 
 `git merge` merges one (time)line of commits into another. This way you can integrate someone elses or your own versions
-into each other. Keywords that you might encounter are:
+into each other. Two common types of merges will be explained:
 
-- fast forward (merge): when Git is able to move the branch (reference) up consequently due to only new commits
- - Git determines this by reachableness of the commits (a --> b --> c)
-- regular (three-way) merge (Page 78):
- - 1: tip of branch a
- - 2: tip of branch b
- - 3: last common commit in timeline
+ - (1) fast forward (merge): when Git is able to move the branch (reference) up consequently due to only new commits
+   - Git determines this by reachableness of the commits (a --> b --> c)
+ - (2) regular (three-way) merge (Page 78):
+   - 1: tip of branch a
+   - 2: tip of branch b
+   - 3: last common commit in timeline
 
 - merge another branch into the current branch (HEAD): `git merge <branch_name>`
 
@@ -571,7 +571,7 @@ Try to fix the merge conflict. No more instructions given:
 
 /Users/antonio/Documents/Gewerbe/MPIB/Git/examples/merge-conflict
 
-## Git rebase (Page 97)
+## Git rebase (Page 97) - optional
 
 Git rebase helps to create a clean line of history without merge commits.
 
@@ -701,12 +701,16 @@ configured a remote source repository.
  - once default branches are configured: `git push`
 - show all local commits that are missing in the remote branch: `git log main ^origin/main`
 
+
 ### Open Science Framework (osf.io)
 
 - 1. Create a new project
 - 1. Add GitHub addon "Add-ons | Select Add-ons" Choose GitHub `https://osf.io/<project_short_url>/addons/`
 - 1. Configure Add-ons by giving osf.io access to your GitHub account
 
+### Collaborative working (merge/pull requests)
+
+As a group we work on the same repository and pull in each others changes via GitHub / GitLab GUI.
 
 ## recommendations
 
