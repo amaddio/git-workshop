@@ -668,7 +668,8 @@ To connect your local (existing) repository to a (GitHub) remote:
  - (optional: if you choose to use `main` as the main branch name instead of master)
    - (move (rename) current (`master`) to `main` branch `git branch -M main`)
    - (push to and assign remote upstream branch for `main` local branch: `git push -u origin main`)
- - push your changes to the remote: `git push -u origin master`
+ - push your changes to the remote: `git push -u <name_of_remote> master`
+ - remove remote repository: `git remote remove <name_of_remote>`
 
 Additional commands to list information about the origin (remote):
 
