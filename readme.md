@@ -494,6 +494,11 @@ when you all of your changes are committed. Solutions:
  - stash
  - temporary `commit` and `commit --amend` later
 
+### Create a Branch other than latest Commit
+
+By default you will create a branch from the latest commit in your checked out branch. That's the commit your branch reference is pointing to.
+If you want to branch off an older commit you can do so by exclusively specifiying the sha: `git checkout -b <branch-name> <sha1-of-older-commit>`.
+
 ## Merging (one branch into another)
 
 `git merge` merges one (time)line of commits into another. This way you can integrate someone elses or your own versions
