@@ -695,6 +695,7 @@ If you want to update your working directory you have to use the `git merge` com
 
 - fetch new changes `git fetch <remote>`
  - once defaults are assigned `git fetch`
+- fetch from all remotes and list ahead/behind state: `git fetch --all; git branch -vv`
 - merge new changes into your local repository `git merge origin/master master`
 - fetch and merge changes `git pull`
 - show all commits of fetched branches that are missing in the local branch: `git log origin/main ^main`
