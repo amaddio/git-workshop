@@ -767,6 +767,7 @@ https://support.atlassian.com/sourcetree/
 - stage all files ending with .py `git add *.py`
 - stage (patch) sections of files `git add -p`
 - to stage untracked files partially use `git add -N <filename> & git add -p`
+- stage all deleted files: `git add $(git ls-files --deleted)`
 - difference between stage and working directory: `git diff`
 - difference between stage and local repository: `git diff --staged` or `git diff --cached`
 - git commit changed tracked files: `git commit -a -m '<commit message>'`
