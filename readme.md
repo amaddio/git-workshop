@@ -343,7 +343,7 @@ What data is stored in a commit? (P. 66)
 
 - See the log of past commits: `git log`
 
-**Deep dive into Gits databas**e:
+**Deep dive into Gits database**:
 
 - get all git objects: `find .git/objects -type f`
 - get sha of git object of filename: `git hash-object <filename>`
