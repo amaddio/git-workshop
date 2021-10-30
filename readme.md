@@ -445,17 +445,18 @@ Working with remotes (Page 51).
 
 ## (temporary) Stashing of pending changes (Page 235)
 
-Helpful command to temporary store changes in tracked files to continue later. Used in most cases when switching between branches.
+Helpful command to temporary store changes in files to continue later. Used in most cases when switching between branches. By default it saves changes in tracked and staged files and reverts working state to last commit of current branch. See list below for other options.
 
-`git stash` or `git stash push`
-
+- store away tracked and staged changes: `git stash` (short) or `git stash push`
+  - comment changes: `git stash push -m "my description of changes"`
 - list stored stashes: `git stash list`
-- apply most recent stash: `git stash apply`
-- apply and delete from stash list: `git stash pop`
-- apply another stash: `git stash apply stash@{<numberofstash>}`
+- apply most recent stash and delete from stack: `git stash pop`
+  - apply and don't delete stash: `git stash apply`
+  - apply specific stash: `git stash apply stash@{<numberofstash>}`
 - delete a stash: `git stash drop stash@{<numberofstash>}`
-- stash files and keep staged files untouched: `git stash --keep-index`
+- stash files and keep staged files untouched: `git stash -k`
 - stash files including untracked files: `git stash -u`
+- stash files including untracked and ignored files: `git stash -a`
 
 ## Branch (Page 65)
 
