@@ -775,6 +775,9 @@ https://support.atlassian.com/sourcetree/
 - remove file from index (but keep locally): `git rm --cached README`
 - show missing (unreachable) commits that are found in branchA that are not in branchB: `git log branchA ^branchB`
 - show missing (unreachable) commits in local repository (after fetching from remote): `git log origin/master ^master`
+- compare two files `git diff <file.a> <file.b>`
+  - which are not tracked: `git diff --no-index <file.a> <file.b>`
+  - highlight differing words: `git diff --word-diff <file.a> <file.b>`
 
 ### deep dive into git internals
 https://github.com/pluralsight/git-internals-pdf
