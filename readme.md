@@ -52,6 +52,7 @@ stupid. contemptible and despicable. simple. Take your pick from the dictionary 
 - `git config --global core.editor vim`
 - `git config --global alias.lol "log --oneline --graph --decorate"`
 - `git config --global alias.lola "log --oneline --graph --decorate --all"`
+- `git config --global alias.pra 'pull --rebase --autostash'`
 
 List your current config settings: `git config --list`
 
