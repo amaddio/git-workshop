@@ -781,6 +781,7 @@ https://support.atlassian.com/sourcetree/
 - compare two files `git diff <file.a> <file.b>`
   - which are not tracked: `git diff --no-index <file.a> <file.b>`
   - highlight differing words: `git diff --word-diff <file.a> <file.b>`
+- clone into an other than the current directory: `git -C <path> clone <repository>`
 
 ### deep dive into git internals
 https://github.com/pluralsight/git-internals-pdf
