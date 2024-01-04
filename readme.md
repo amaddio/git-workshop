@@ -782,6 +782,7 @@ https://support.atlassian.com/sourcetree/
   - which are not tracked: `git diff --no-index <file.a> <file.b>`
   - highlight differing words: `git diff --word-diff <file.a> <file.b>`
 - clone into an other than the current directory: `git -C <path> clone <repository>`
+- find a commit that did introduce a file: `git log --follow <path>`
 
 ### deep dive into git internals
 https://github.com/pluralsight/git-internals-pdf
