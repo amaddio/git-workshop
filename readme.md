@@ -781,6 +781,7 @@ https://support.atlassian.com/sourcetree/
 - compare two files `git diff <file.a> <file.b>`
   - which are not tracked: `git diff --no-index <file.a> <file.b>`
   - highlight differing words: `git diff --word-diff <file.a> <file.b>`
+- find all renamed files: ` git diff --name-only --diff-filter=R <from-sha> <optional-to-sha>`
 - clone into an other than the current directory: `git -C <path> clone <repository>`
 - find a commit that did introduce a file: `git log --follow <path>`
 - debug connection issues: `git config core.sshCommand "ssh -vvv" && git fetch --all`
