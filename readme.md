@@ -624,6 +624,7 @@ List of useful git log formulas:
 - show all commits but merge-commits: `git log --no-merges`
 - show all commits that are in branch A that are not in branch B: `git log <branch_a> ^<branch_b>`
  - show all commits in remote branch that are not yet in local branch: `git log origin/main ^main`
+- list commits by user: `git log --author=<regular expression>`
 
 _Note that these arguments can be combined e.g. `git log -2 -p`_
 
