@@ -54,6 +54,8 @@ stupid. contemptible and despicable. simple. Take your pick from the dictionary 
 - `git config --global alias.lola "log --oneline --graph --decorate --all"`
 - `git config --global alias.pra 'pull --rebase --autostash'`
 - `git config --global alias.fapv 'fetch --all --prune --verbose'`
+- `git config --global pull.rebase true`
+- `git config --global rebase.autoStash true`
 
 
 List your current config settings: `git config --list`
@@ -777,6 +779,7 @@ https://support.atlassian.com/sourcetree/
 - difference between stage and local repository: `git diff --staged` or `git diff --cached`
 - git commit changed tracked files: `git commit -a -m '<commit message>'`
 - remove file from index (but keep locally): `git rm --cached README`
+- apply changes of commit (cherry-pick) to working dir without adding commit to timeline: `git cherry-pick -n <HASH> && git reset`
 - show missing (unreachable) commits that are found in branchA that are not in branchB: `git log branchA ^branchB`
 - show missing (unreachable) commits in local repository (after fetching from remote): `git log origin/master ^master`
 - compare two files `git diff <file.a> <file.b>`
