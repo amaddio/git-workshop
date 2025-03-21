@@ -789,6 +789,9 @@ https://support.atlassian.com/sourcetree/
 - clone into an other than the current directory: `git -C <path> clone <repository>`
 - find a commit that did introduce a file: `git log --follow <path>`
 - debug connection issues: `git config core.sshCommand "ssh -vvv" && git fetch --all`
+- create and apply a patch, use either a or b:
+  - create: (a) `git format-patch HEAD~1` or (b) `git diff > changes.patch`
+  - apply: (a) `git apply --stat <patch_file>.patch` or (b)`git apply <patch_file>.patch`
 
 ### deep dive into git internals
 https://github.com/pluralsight/git-internals-pdf
